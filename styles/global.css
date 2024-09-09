@@ -1,4 +1,4 @@
-* {
+* { /* * é um seletor global */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,48 +9,48 @@
   --brand-color: #60A5FA ; 
   --brand-color-dark: #1D4ED8; 
   /* variavel do background color */
-  --background-color: ##0F172A;
+  --background-color: #0F172A;
   /* variavel do stroke */ 
-  --stroke-color: ##1E293B; 
+  --stroke-color: #1E293B; 
   /* variavel do texto primario */ 
-  --text-color-primary: #F1F5F;
+  --text-color-primary: #F1F5F9;
   /* variavel do texto secundario */
   --text-color-secondary: #CBD5E1; 
   /* variavel da font importada */
   font-family: "Archivo", sans-serif;
-  /* variavel da font larga tendo tamanho da font definindo o line-heigth */
-  --text-h1: bold 24px/135% var(--font-family);  
-  /* variavel do texto tendo tamanho da font definindo o line-heigth 150% ou 1.5*/
-  --text-h2: 16px/140% var(--font-family);
-  /* variavel da font do meio tendo tamanho da font definindo o line-heigth */
-  --text-h3 : 14px/140% var(--font-family);
-  /* variavel da font do small tendo tamanho da font definindo o line-heigth */
-  --text-span: 14px/145% var(--font-family);  
-  /*variavel de texto do paragrafo */
-  --text-paragraph: 14px/160% var(--font-family);  
+  /* variavel da font da tag H1 */
+  --text-h1: 800 24px/135% var(--font-family);  
+  /* variavel da font da tag H2 */
+  --text-h2: 800 16px/140% var(--font-family);
+  /* variavel da font da tag H3 */
+  --text-h3 : 800 14px/140% var(--font-family);
+  /* variavel da font da tag SPAN */
+  --text-span: 600 14px/145% var(--font-family);  
+  /* variavel do texto padrao */
+  --text: 400 16px/140% var(--font-family);  
+  /*variavel da font da tah PARAGRAFO */
+  --text-sm: 400 14px/160% var(--font-family);  
    
 }
 
 body {
   /* variavel da font que vai na page */
-  font: var();
+  font: var(--text);
   /* dentro do parenteses vai a variavel */ 
-  color: var(--text-color-secondary); 
+  color: var(--text-color-primary); 
   /* variavel do fundo da page */
   background-color: var(--background-color); 
 }
 
-/* vai conter a nivel de projeto */
-.container {
-  /* vai definir o espaço nas laterais */
-  padding-inline: 32px;
-  /* largura maxima */
-  max-width: 1280px;
-  /* so vai ser mexido nas laterais ficando automatico */
-  margin-inline: auto;
+a {
+  text-decoration: none; 
+  color: inherit;
 }
- /* variavel aplicada a div antes do nav para nao ter limitacao de tamanho */
-.bg-surface-color {
-  /* variavel do fundo do cabecalho onde esta a logo */
-  background-color: var(--surfarce-color);
+
+a:hover{
+  color: var(--brand-color);
+}
+
+h1, h2, h3 {
+  font: inherit;
 }
