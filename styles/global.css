@@ -6,7 +6,7 @@
 
 :root {
   /* variavel */
-  --brand-color: #60A5FA ; 
+  --brand-color-light: #60A5FA ; 
   --brand-color-dark: #1D4ED8; 
   /* variavel do background color */
   --background-color: #0F172A;
@@ -16,6 +16,7 @@
   --text-color-primary: #F1F5F9;
   /* variavel do texto secundario */
   --text-color-secondary: #CBD5E1; 
+
   /* variavel da font importada */
   font-family: "Archivo", sans-serif;
   /* variavel da font da tag H1 */
@@ -29,8 +30,7 @@
   /* variavel do texto padrao */
   --text: 400 16px/140% var(--font-family);  
   /*variavel da font da tah PARAGRAFO */
-  --text-sm: 400 14px/160% var(--font-family);  
-   
+  --text-sm: 400 14px/160% var(--font-family);     
 }
 
 body {
@@ -48,9 +48,25 @@ a {
 }
 
 a:hover{
-  color: var(--brand-color);
+  color: var(--brand-color-light);
 }
 
 h1, h2, h3 {
   font: inherit;
+}
+
+.container{
+  max-width: 1280px;
+  padding-inline: 32px;
+  margin-inline: auto;
+}
+
+/* utility-first */
+.grid{
+  display: grid;
+}
+
+.grid-flow-col{
+  grid-auto-flow: column;
+  
 }
