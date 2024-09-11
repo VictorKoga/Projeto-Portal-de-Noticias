@@ -1,53 +1,38 @@
-* { /* * é um seletor global */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  /* variavel */
-  --brand-color-light: #60A5FA ; 
-  --brand-color-dark: #1D4ED8; 
-  /* variavel do background color */
-  --background-color: #0F172A;
-  /* variavel do stroke */ 
-  --stroke-color: #1E293B; 
-  /* variavel do texto primario */ 
+  --brand-color-light: #60A5FA;
+  --brand-color-dark: #1D4ED8;
+  --bg-color: #0F172A;
+  --stroke-color: #1E293B;
   --text-color-primary: #F1F5F9;
-  /* variavel do texto secundario */
-  --text-color-secondary: #CBD5E1; 
+  --text-color-secondary: #CBD5E1;
 
-  /* variavel da font importada */
-  font-family: "Archivo", sans-serif;
-  /* variavel da font da tag H1 */
-  --text-h1: 800 24px/135% var(--font-family);  
-  /* variavel da font da tag H2 */
-  --text-h2: 800 16px/140% var(--font-family);
-  /* variavel da font da tag H3 */
-  --text-h3 : 800 14px/140% var(--font-family);
-  /* variavel da font da tag SPAN */
-  --text-span: 600 14px/145% var(--font-family);  
-  /* variavel do texto padrao */
-  --text: 400 16px/140% var(--font-family);  
-  /*variavel da font da tah PARAGRAFO */
-  --text-sm: 400 14px/160% var(--font-family);     
+  --font-family: "Archivo", sans-serif;
+  --h1: 800 24px/135% var(--font-family);
+  --h2: 800 16px/140% var(--font-family);
+  --h3: 800 14px/140% var(--font-family);
+  --text-span: 600 14px/145% var(--font-family);
+  --text: 400 16px/140% var(--font-family);
+  --text-sm: 400 14px/160% var(--font-family);
 }
 
 body {
-  /* variavel da font que vai na page */
   font: var(--text);
-  /* dentro do parenteses vai a variavel */ 
-  color: var(--text-color-primary); 
-  /* variavel do fundo da page */
-  background-color: var(--background-color); 
+  color: var(--text-color-primary);
+  background-color: var(--bg-color);
 }
 
 a {
-  text-decoration: none; 
+  text-decoration: none;
   color: inherit;
 }
 
-a:hover{
+a:hover {
   color: var(--brand-color-light);
 }
 
@@ -59,18 +44,26 @@ img {
   max-width: 100%;
 }
 
-.container{
+.container {
   max-width: 1280px;
   padding-inline: 32px;
   margin-inline: auto;
 }
 
 main {
-  margin-top: 40px;
-  gap: 80px;
+  margin-block: 40px;
+  row-gap: 80px;
+  column-gap: 32px;
+
+  grid-template-columns: 2fr 1.3fr;
+
+  grid-template-areas: 
+  "featured featured"
+  "weekly weekly"
+  "ai aside";
 }
 
-.content-tag{
+.content-tag {
   display: inline-block;
   background-color: var(--brand-color-dark);
   padding: 4px 8px;
@@ -78,6 +71,5 @@ main {
   font: 500 10px/1.2 var(--font-family);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--text-color-primary);
-  box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.251);
+  box-shadow: 0px 4px 16px #02061740;
 }

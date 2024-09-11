@@ -1,13 +1,13 @@
 /* utility-first */
-.grid{
+.grid {
   display: grid;
 }
 
-.grid-flow-col{
-  grid-auto-flow: column;  
+.grid-flow-col {
+  grid-auto-flow: column;
 }
 
-.grid-cols-2{
+.grid-cols-2 {
   grid-template-columns: 1fr 1fr;
 }
 
@@ -19,18 +19,18 @@
   gap: 32px;
 }
 
-.text-2x1{
+.text-2xl {
   font: var(--h1);
 }
 
-.text-xl{
+.text-xl {
   font: var(--h2);
 }
 
-.text-lg{
+.text-lg {
   font: var(--h3);
 }
 
-.text-sm{
+.text-sm {
   font: var(--text-sm);
 }
